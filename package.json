@@ -1,8 +1,12 @@
 {
-  "name": "nova-pasta",
-  "module": "index.ts",
+  "name": "repeat-async",
   "type": "module",
-  "private": true,
+  "author": {
+    "name": "Keven Campos",
+    "email": "kevencampos1@hotmail.com"
+  },
+  "version": "0.0.1",
+  "private": false,
   "scripts": {
     "dev": "bun --watch src/index.ts",
     "build": "tsc",
@@ -11,7 +15,7 @@
     "version:minor": "npm version minor -m \"chore: bump minor version %s\""
   },
   "bugs": {
-    "url": "https://github.com/KevenCampos/FastDiscordJS/issues",
+    "url": "https://github.com/KevenCampos/repeatAsync/issues",
     "email": "kevencampos1@hotmail.com"
   },
   "funding": {
@@ -20,13 +24,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KevenCampos/FastDiscordJS"
+    "url": "https://github.com/KevenCampos/repeatAsync"
   },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5"
-  },
-  "version": "0.0.1"
+  }
 }

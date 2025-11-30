@@ -1,7 +1,7 @@
-import { asyncInterval } from "..";
+import { repeatAsync } from "..";
 
 // Exemple usage with timeout
-asyncInterval({ delay: 1000, timeout: 1000,
+repeatAsync({ delay: 1000, timeout: 1000,
     functionToExec: async () => {
         // If the function takes more than 1 second (timeout param), the onExcededTimeout will be called
     },
@@ -13,7 +13,7 @@ asyncInterval({ delay: 1000, timeout: 1000,
 
 
 // Exemple usage without timeout
-asyncInterval({ delay: 1000,
+repeatAsync({ delay: 1000,
     functionToExec: async () => {
         // Function to be executed every "delay" milliseconds
     },
@@ -24,7 +24,7 @@ asyncInterval({ delay: 1000,
 });
 
 // Stopping the loop example
-const loopingProcess = asyncInterval({ delay: 1000,
+const loopingProcess = repeatAsync({ delay: 1000,
     functionToExec: async () => {
         // Function to be executed every "delay" milliseconds
     }

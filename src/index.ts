@@ -1,22 +1,22 @@
-type asyncIntervalBase = {
+type repeatAsyncBase = {
     delay: number;
     onError?: (error: any) => void;
     functionToExec: () => Promise<void>;
 }
 
-type asyncIntervalWithTimeout = asyncIntervalBase & {
+type repeatAsyncWithTimeout = repeatAsyncBase & {
     timeout: number;
     onExcededTimeout?: () => void;
 }
 
-type asyncIntervalNoTimeout = asyncIntervalBase & {
+type repeatAsyncNoTimeout = repeatAsyncBase & {
     timeout?: never;
     onExcededTimeout?: never;
 }
 
-type asyncIntervalParams = asyncIntervalWithTimeout | asyncIntervalNoTimeout;
+type repeatAsyncParams = repeatAsyncWithTimeout | repeatAsyncNoTimeout;
 
-export function asyncInterval(data: asyncIntervalParams) {
+export function repeatAsync(data: repeatAsyncParams) {
     let timeoutId: NodeJS.Timeout | null = null;
     let stopped = false;
 
