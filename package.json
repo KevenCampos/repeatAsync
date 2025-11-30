@@ -1,6 +1,7 @@
 {
   "name": "repeat-async",
   "type": "module",
+  "main": "dist/index.js",
   "author": {
     "name": "Keven Campos",
     "email": "kevencampos1@hotmail.com"
@@ -10,9 +11,7 @@
   "scripts": {
     "dev": "bun --watch src/index.ts",
     "build": "tsc",
-    "test": "bun --watch src/tests/index.ts",
-    "version:patch": "npm version patch -m \"chore: bump patch version %s\"",
-    "version:minor": "npm version minor -m \"chore: bump minor version %s\""
+    "test": "bun --watch src/tests/index.ts"
   },
   "bugs": {
     "url": "https://github.com/KevenCampos/repeatAsync/issues",
