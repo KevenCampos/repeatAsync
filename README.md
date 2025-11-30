@@ -29,7 +29,8 @@ Examples
 ```ts
 import { repeatAsync } from "repeatAsync";
 
-const runner = repeatAsync({ delay: 1000,
+const runner = repeatAsync({ 
+  delay: 1000,
 
   functionToExec: async () => {
     console.log("executing task");
